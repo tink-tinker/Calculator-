@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Attractive Calculator</title>
+    <link rel="stylesheet" href="AttractiveCalculator.css" >
+</head>
+<body>
+    <h1>Online calculator</h1>
+    <h2>By:Tinker</h2>
+    <h2> ~TF</h2>
+   
+</body>
+    <form name="formz" class="calci" action="AttractiveCalculator.html" method="POST">
+    <input type="text" name="ans" id="display">
+    <br></br>
+    <input type="button" class="btndesign" value="C" onclick="formz.ans.value=''">
+    <!-- we use in buit func substring for backspace -->
+    <input type="button" class="btndesign" value="<" onclick="formz.ans.value=formz.ans.value.substring(0,formz.ans.value.length*1-1)">
+    <input type="button" class="btndesign" value="00" onclick="formz.ans.value+='00'">
+    <input type="button" class="operator_design" value="/" onclick="formz.ans.value+='/'">
+    <br></br>
+    <input type="button" class="btndesign" value="7" onclick="formz.ans.value+='7'">
+    <input type="button" class="btndesign" value="8" onclick="formz.ans.value+='8'">
+    <input type="button" class="btndesign" value="9" onclick="formz.ans.value+='9'">
+    <input type="button" class="operator_design" value="*" onclick="formz.ans.value+='*'">
+    <br></br>
+    <input type="button" class="btndesign" value="4" onclick="formz.ans.value+='4'">
+    <input type="button" class="btndesign" value="5" onclick="formz.ans.value+='5'">
+    <input type="button" class="btndesign" value="6" onclick="formz.ans.value+='6'">
+    <input type="button" class="operator_design" value="-" onclick="formz.ans.value+='-'">
+    <br></br>
+    <input type="button" class="btndesign" value="1" onclick="formz.ans.value+='1'">
+    <input type="button" class="btndesign" value="2" onclick="formz.ans.value+='2'">
+    <input type="button" class="btndesign" value="3" onclick="formz.ans.value+='3'">
+    <input type="button" class="operator_design" value="+" onclick="formz.ans.value+='+'">
+    <br></br>
+    <!-- we have only 3 at the end ..thus we double the length of zero button..thus id used -->
+    <input type="button" id="zero" value="0" onclick="formz.ans.value+='0'">
+    <input type="button" class="btndesign" value="." onclick="formz.ans.value+='.'">
+    <input type="button" class="operator_design" value="=" onclick="formz.ans.value=eval(formz.ans.value)">
+    <!-- for equal to we use in built func ... eval..which is enough to make the calculator workable -->
+
+    </form>
+
+</html>
